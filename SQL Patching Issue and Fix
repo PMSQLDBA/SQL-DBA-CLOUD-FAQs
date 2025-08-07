@@ -1,0 +1,39 @@
+Owner: Madhu sudhana Rao Gadipudi
+Source: LinkedIn
+https://www.linkedin.com/posts/madhu-rao-gadipudi_one-of-the-most-frequent-issues-dbas-face-activity-7359238936600211456-aFRX?utm_source=share&utm_medium=member_desktop&rcm=ACoAACKCDlIBwCyHwl-zdzyASa1BIP491KNZCLE
+
+
+One of the most frequent issues DBAs face during SQL Server patching is when the SQL Server service fails to start after applying a patch. 
+This can be caused by various factors, such as corrupted system databases, incompatible configuration changes, or issues with disk space or permissions.
+
+𝗧𝗵𝗲 𝗜𝘀𝘀𝘂𝗲:
+After applying Cumulative Updates or Service Packs, many DBAs experience failures where the SQL Server service doesn’t restart or the instance won’t come online. 
+The root cause could range from corrupted system databases (like master, msdb, or model) to configuration conflicts or permission issues.
+
+𝗖𝗼𝗺𝗺𝗼𝗻 𝗖𝗮𝘂𝘀𝗲𝘀:
+Corrupted system databases (master, msdb)
+Incompatible configuration or parameter changes
+Missing or incorrect permissions for SQL Server service account
+Disk space issues or problems with SQL Server file access
+Registry or dependency issues affecting the service
+
+𝗥𝗲𝘀𝗼𝗹𝘂𝘁𝗶𝗼𝗻 𝗦𝘁𝗲𝗽𝘀:
+𝗖𝗵𝗲𝗰𝗸 𝗘𝗿𝗿𝗼𝗿 𝗟𝗼𝗴𝘀: Review SQL Server Error Logs and Windows Event Logs for specific errors.
+
+𝗥𝗲𝘀𝘁𝗼𝗿𝗲 𝗦𝘆𝘀𝘁𝗲𝗺 𝗗𝗮𝘁𝗮𝗯𝗮𝘀𝗲𝘀: If corruption is detected, restore from a known good backup of system databases.
+
+𝗖𝗵𝗲𝗰𝗸 𝗖𝗼𝗻𝗳𝗶𝗴𝘂𝗿𝗮𝘁𝗶𝗼𝗻: Ensure no conflicts with new settings introduced by the patch. Verify memory settings, tempdb, and other configurations.
+
+𝗩𝗲𝗿𝗶𝗳𝘆 𝗣𝗲𝗿𝗺𝗶𝘀𝘀𝗶𝗼𝗻𝘀: Ensure the SQL Server service account has the necessary access to files and directories.
+
+𝗗𝗶𝘀𝗸 𝗦𝗽𝗮𝗰𝗲: Confirm sufficient disk space, especially for tempdb and transaction logs.
+
+𝗥𝗲𝗮𝗽𝗽𝗹𝘆 𝗣𝗮𝘁𝗰𝗵 𝗼𝗿 𝗥𝗲𝗽𝗮𝗶𝗿 𝗜𝗻𝘀𝘁𝗮𝗹𝗹𝗮𝘁𝗶𝗼𝗻: If needed, reapply the patch or use SQL Server Setup to perform a repair.
+
+𝗥𝗼𝗹𝗹𝗯𝗮𝗰𝗸 𝗣𝗮𝘁𝗰𝗵 (𝗶𝗳 𝗻𝗲𝗲𝗱𝗲𝗱): If the issue persists, rollback the patch or restore from backup.
+
+𝗣𝗿𝗲𝘃𝗲𝗻𝘁𝗶𝗼𝗻 𝗧𝗶𝗽𝘀:
+Always test patches in a non-prod environment first.
+Backup critical system databases, especially master, before applying patches.
+Document configurations before patching and monitor disk space and logs to detect issues early.
+Patching is critical for SQL Server security and performance, but it’s vital to ensure a smooth patching process with proactive steps. Let’s keep SQL environments healthy and running!
